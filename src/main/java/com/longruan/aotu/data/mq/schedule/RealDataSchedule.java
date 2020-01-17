@@ -1,6 +1,6 @@
-package com.longruan.aotu.realData.mq.schedule;
+package com.longruan.aotu.data.mq.schedule;
 
-import com.longruan.aotu.realData.mq.upload.UploadData;
+import com.longruan.aotu.data.mq.upload.UploadData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;

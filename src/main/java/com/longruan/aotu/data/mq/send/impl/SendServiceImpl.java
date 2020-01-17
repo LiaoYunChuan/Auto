@@ -1,6 +1,6 @@
-package com.longruan.aotu.realData.mq.send.impl;
+package com.longruan.aotu.data.mq.send.impl;
 
-import com.longruan.aotu.realData.mq.send.SendService;
+import com.longruan.aotu.data.mq.send.SendService;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

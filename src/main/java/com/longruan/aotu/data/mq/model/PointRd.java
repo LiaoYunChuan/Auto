@@ -1,4 +1,4 @@
-package com.longruan.aotu.realData.mq.model;
+package com.longruan.aotu.data.mq.model;
 
 import java.io.Serializable;
 

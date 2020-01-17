@@ -1,4 +1,4 @@
-package com.longruan.aotu.realData.mq.config;
+package com.longruan.aotu.data.mq.config;
 
 
 import net.sf.json.JsonConfig;

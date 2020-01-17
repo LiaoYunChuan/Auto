@@ -1,6 +1,6 @@
-package com.longruan.aotu.realData.mq.model;
+package com.longruan.aotu.data.mq.model;
 
-import com.longruan.aotu.realData.model.RealtimeData;
+import com.longruan.aotu.data.model.RealtimeData;
 
 import java.util.List;
 

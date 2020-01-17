@@ -1,4 +1,4 @@
-package com.longruan.aotu.realData.mq.send;
+package com.longruan.aotu.data.mq.send;
 
 public interface SendService {
 

@@ -1,8 +1,7 @@
-package com.longruan.aotu.realData.mapper;
+package com.longruan.aotu.data.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.longruan.aotu.realData.model.RealData;
-import com.longruan.aotu.realData.model.RealtimeData;
+import com.longruan.aotu.data.model.RealtimeData;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

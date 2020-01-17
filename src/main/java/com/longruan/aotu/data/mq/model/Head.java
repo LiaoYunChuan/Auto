@@ -1,4 +1,4 @@
-package com.longruan.aotu.realData.mq.model;
+package com.longruan.aotu.data.mq.model;
 
 public class Head {
     private String company_id;

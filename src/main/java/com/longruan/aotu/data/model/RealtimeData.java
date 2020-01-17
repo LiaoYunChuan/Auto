@@ -1,6 +1,5 @@
-package com.longruan.aotu.realData.model;
+package com.longruan.aotu.data.model;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 /**
