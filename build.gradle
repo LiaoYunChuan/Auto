@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.longruan'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.0.3'
+    implementation 'org.springframework.boot:spring-boot-starter-amqp:1.5.2.RELEASE'
+    implementation 'net.sf.json-lib:json-lib:2.4:jdk15'
+    compile ("mysql:mysql-connector-java:5.1.24")
+    runtimeOnly 'com.microsoft.sqlserver:mssql-jdbc'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
