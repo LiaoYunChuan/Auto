@@ -31,44 +31,13 @@ public class UploadData {
     @Autowired
     private SendService sendService;
 
-    @Value("${mineId}")
-    private String mineId;
-
     private static Map<String,String> map=new HashMap<>();
 
-    static {
-        map.put("","功率因数");
-        map.put("A","电流");
-        map.put("℃","温度");
-        map.put("HZ","频率");
-        map.put("KW","功率");
-        map.put("m/s","风速");
-        map.put("m3/min","风量");
-        map.put("m3/s","风量");
-        map.put("mm/s","振动");
-        map.put("Pa","负压");
-        map.put("r/min","转速");
-        map.put("V","电压");
-    }
 
     public void upload(){
         List<PointRd> data=new ArrayList<>();
         QueryWrapper<RealtimeData> wrapper=new QueryWrapper<>();
         List<RealtimeData> list=realDataService.list(wrapper);
-        /*if (!CollectionUtils.isEmpty(list)){
-            list.forEach(it->{
-                String sensorType=it.getSensorType();
-                if (map.containsKey(sensorType)){
-                    PointRd pointRd = new PointRd();
-                    pointRd.setMine_id(mineId);
-                    pointRd.setReal_value(it.getSensorValue().equals("None")?null:Float.valueOf(it.getSensorValue()));
-                    pointRd.setSensor_id(it.getSensorId());
-                    pointRd.setSnap_time(it.getUpDateTime().replace(" ","/"));
-                    pointRd.setSensor_status(it.getState().equals("Good")?"0":"1");
-                    data.add(pointRd);
-                }
-            });
-        }*/
         MQmsg mQmsg=new MQmsg();
         Head head=new Head();
         head.setCompany_id("5223010007");
