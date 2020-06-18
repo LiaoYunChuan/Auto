@@ -29,10 +29,13 @@ public class UploadData {
         MQmsg mQmsg=new MQmsg();
         Head head=new Head();
         head.setCompany_id("5223010007");
+        head.setOrg_code("xxxxxxxxxxxxx");
+        head.setUp_time("1546272000");
         mQmsg.setData(list);
         mQmsg.setHead(head);
         JsonConfig config = new JsonConfig();
         byte[] msg = JSONObject.fromObject(mQmsg,config).toString().getBytes(Charset.forName("UTF-8"));
         sendService.send("EX_DC_REALTIME_DATA",msg);
+        System.out.println(msg);
     }
 }

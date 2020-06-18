@@ -6,6 +6,7 @@ import com.longruan.aotu.data.mq.config.DateJsonValueProcessor;
 import com.longruan.aotu.data.mq.model.MQmsg;
 import com.longruan.aotu.data.mq.send.SendService;
 import com.longruan.aotu.data.service.RealDataService;
+import com.longruan.aotu.data.util.MoneyUtil;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest
-class AotuApplicationTests {
+class AutoApplicationTests {
 
     @Autowired
     private RealDataService realDataService;
@@ -26,7 +27,7 @@ class AotuApplicationTests {
 
     @Test
     void contextLoads() {
-        QueryWrapper<RealtimeData> wrapper=new QueryWrapper<>();
+       /* QueryWrapper<RealtimeData> wrapper=new QueryWrapper<>();
         wrapper.eq("SystemName", "通风系统");
         List<RealtimeData> list=realDataService.list(wrapper);
         System.out.println(list);
@@ -35,7 +36,9 @@ class AotuApplicationTests {
         mQmsg.setData(list);
         config.registerJsonValueProcessor(LocalDateTime.class,new DateJsonValueProcessor("yyyy-MM-dd HH:mm:ss"));
         byte[] data = JSONObject.fromObject(mQmsg,config).toString().getBytes(Charset.forName("UTF-8"));
-        sendService.send("EX_AUTO_RTDATA",data);
+        sendService.send("EX_AUTO_RTDATA",data);*/
+        int money= MoneyUtil.summoney(3);
+        System.out.println(money);
     }
 
 }

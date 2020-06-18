@@ -6,6 +6,9 @@ import com.longruan.aotu.data.model.RealtimeData;
 import com.longruan.aotu.data.service.RealDataService;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author lyc
+ */
 @Service
 public class RealDataServiceImpl extends ServiceImpl<RealDataMapper, RealtimeData> implements RealDataService {
 }
